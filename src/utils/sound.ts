@@ -25,7 +25,10 @@ function beep(freq: number, duration: number, gain = 0.3): void {
 
 // A short medieval-ish bell chime
 export function playBell(): void {
-  beep(880, 0.8, 0.4);
-  setTimeout(() => beep(1100, 0.5, 0.2), 200);
+  beep(660, 1.5, 0.4);
+  setTimeout(() => beep(880, 1.2, 0.3), 300);
+  setTimeout(() => beep(1100, 1.0, 0.2), 600);
+  setTimeout(() => beep(880, 1.5, 0.15), 900);
+  setTimeout(() => beep(660, 2.0, 0.1), 1200);
 }
 
