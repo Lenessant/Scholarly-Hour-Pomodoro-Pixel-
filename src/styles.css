@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'VCR OSD MONO';
+  src: url('../../assets/fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pixelfy Sans';
+  src: url('../../assets/fonts/PixelifySans-VariableFont_wght.ttf') format('truetype');
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 366px;
+  height: 512px;
+  -webkit-app-region: drag;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+.screen{
+  width: 366px;
+  height: 512px;
+  background-image: url("/assets/images/startScreen.png");
+  background-size: 100% 100%;
+  image-rendering: pixelated; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+#closeBtn {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  background: #F7EECF;
+  border: 2px solid #AC7548;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 8px;
+  color: black;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#closeBtn:hover {
+  background: #ba5c4b;
+  color: #F7EECF;
+}

@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  image-rendering: pixelated; /* keeps pixel art crisp */
+}
+
+.screen {
+  width: 366px;
+  height: 512px;
+
+  /* tile/stretch your 50x70 png to fill */
+  background-image: url("/assets/images/startScreen.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+h1 {
+  font-family: 'Pixelify Sans', monospace; /* swap for your pixel font */
+  font-size: 1rem;
+  color: #3b2a1a;
+  line-height: 0.1;
+  text-align: center;
+}
+
+
+#startBtn {
+  background-image: url("/assets/images/beginbtnbg.png");
+  background-size: 100% 100%;
+  font-family: 'Pixelify Sans', monospace;
+  font-size: 1rem;
+  color: #f1e2bf;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  image-rendering: pixelated;
+  width: 126px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

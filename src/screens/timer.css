@@ -1,0 +1,66 @@
+
+.mode-tabs{
+    display: flex;
+    gap: 8px;
+   
+}
+
+.mode-tabs button {
+  background-color: #AC7548;
+  border: 2px solid black;
+  border-radius: 16px;
+  padding: 6px 6px;
+  font-size: 11px;
+  font-family: 'VCR OSD MONO', monospace;
+  color: #F7EECF;
+  width: 90px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.mode-tabs button.active {
+  background-color: #4a392a;
+  color: #F7EECF;
+  font-weight: bold;
+}
+.timer-display{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+#timer{
+  font-family: 'VCR OSD MONO', monospace;
+  font-size: 64px;
+  color: black;
+}
+
+.controls{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.controls button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  image-rendering: pixelated;
+}
+
+.controls button img {
+  width: 40px;
+  height: 40px;
+}
+
+#playBtn, #pauseBtn img{
+  width: 60px;
+  height: 60px;
+}
+
+#hourglass{
+  width: 80px;
+  height: 80px;
+  image-rendering: pixelated;
+}

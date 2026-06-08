@@ -1,0 +1,91 @@
+.settings-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h2 {
+  font-family: 'Pixelfy Sans', monospace;
+}
+
+.settings-fields label {
+  font-weight: bold;
+  font-family: 'Pixelfy Sans', monospace;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  
+}
+
+.settings-fields input::-webkit-outer-spin-button,
+.settings-fields input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+ 
+}
+
+.settings-fields input {
+  width: 112px;
+  height: 36px;
+  padding: 8px;
+  font-size: 20px;
+  font-family: 'VCR OSD MONO', monospace;
+  border: 3px solid #AC7548;
+  border-radius: 16px;
+  color: black;
+  text-align: center;
+
+}
+
+.settings-controls{
+  display: flex;
+  gap: 16px;
+}
+
+#saveBtn {
+  width: 81px;
+  background-color: #AC7548;
+  color: white;
+  border: 3px solid #000;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-family: 'Pixelify Sans', monospace;
+  cursor: pointer;
+}
+#saveBtn:hover {
+  width: 81px;
+  background-color: #61432a;
+  color: white;
+  border: 3px solid #000;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-family: 'Pixelify Sans', monospace;
+  cursor: pointer;
+}
+
+#cancelBtn {
+width: 81px;
+  background-color: transparent;
+  color: black;
+  border: 3px solid black;
+  padding: 8px ;
+  border-radius: 24px;
+  font-size: 16px;
+  font-family: 'Pixelify Sans', monospace;
+  cursor: pointer;
+  text-align: center;
+}
+
+#cancelBtn:hover {
+  width: 81px;
+  background-color: #cec7ac;
+  color: black;
+  border: 3px solid black;
+  padding: 8px ;
+  border-radius: 24px;
+  font-size: 16px;
+  font-family: 'Pixelify Sans', monospace;
+  cursor: pointer;
+  text-align: center;
+}
