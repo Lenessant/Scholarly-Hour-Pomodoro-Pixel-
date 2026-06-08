@@ -20,7 +20,7 @@
         "decorations": false,
         "transparent": true,
         "maximizable": false,
-        "minimizable": false
+        "minimizable": true
       }
     ],
     "security": {

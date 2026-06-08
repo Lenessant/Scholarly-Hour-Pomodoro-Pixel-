@@ -16,4 +16,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("closeBtn")!.addEventListener("click", async () => {
     await getCurrentWindow().close();
   });
+  document.getElementById("minimizeBtn")!.addEventListener("click", async () => {
+  await getCurrentWindow().minimize();
+});
 });
