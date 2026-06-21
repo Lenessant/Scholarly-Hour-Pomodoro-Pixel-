@@ -3,6 +3,7 @@ import { state } from "./state";
 import { loadSettings } from "./utils/storage";
 import { getCurrentWindow } from "@tauri-apps/api/window";
 import { playBell } from "./utils/sound";
+import { requestNotificationPermission } from "./utils/notify";
 import "./styles.css";
 
 const saved = loadSettings();
@@ -12,16 +13,20 @@ if (saved) {
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
+  await requestNotificationPermission();
+  
   navigate("start");
 
   document.getElementById("closeBtn")!.addEventListener("click", async () => {
     await getCurrentWindow().close();
   });
-  document.getElementById("minimizeBtn")!.addEventListener("click", async () => {
-  await getCurrentWindow().minimize();
-  });
+  document
+    .getElementById("minimizeBtn")!
+    .addEventListener("click", async () => {
+      await getCurrentWindow().minimize();
+    });
 
   document.addEventListener("keydown", (e) => {
-  if (e.key === "b") playBell();
-});
+    if (e.key === "b") playBell();
+  });
 });

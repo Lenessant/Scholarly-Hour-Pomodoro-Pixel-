@@ -3,6 +3,7 @@ import { state, resetToPhase } from "../state";
 import { toggle, reset, stop, setCallbacks } from "../timer";
 import { formatTime } from "../utils/formatTime";
 import { playBell } from "../utils/sound";
+import { sendNotification } from "../utils/notify";
 import "./timer.css";
 
 export function showTimerScreen (app: HTMLDivElement): void {
@@ -38,7 +39,6 @@ export function showTimerScreen (app: HTMLDivElement): void {
 
   function updateDisplay(): void {
     timerEl.textContent = formatTime(state.time);
-    // swap pause/play image
     const pauseImg = pauseBtn.querySelector("img") as HTMLImageElement;
     pauseImg.src = state.isPaused ? "/assets/images/playBtn.png" : "/assets/images/pauseBtn.png";
     updateTabs();
@@ -46,14 +46,20 @@ export function showTimerScreen (app: HTMLDivElement): void {
 
   setCallbacks({
     onTick: updateDisplay,
-    onComplete: () => {
+    onComplete: async () => {
       playBell();
-      stop();
+
       if (state.phase === "work") {
+        // Work session ended — tell the scholar to rest
+        await sendNotification("⚔️ Focus session complete!", "Well done, scholar. Take your rest.");
         resetToPhase("shortBreak");
-      } else { 
+      } else {
+        // Break ended — time to get back to work
+        await sendNotification("📜 Break over!", "Back to the scrolls, scholar.");
         resetToPhase("work");
       }
+
+      stop();
       updateDisplay();
     },
   });
